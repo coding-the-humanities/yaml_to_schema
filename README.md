@@ -3,8 +3,13 @@ Transforms YAML specs to (mongoose) schemas
 
 Install
 
-> npm install
+```
+npm install
 
+```
 Usage 
 
-> node yaml_parser.js -i __yaml-input-file.yml__ > __mongoose-output-file.js__
+```
+node yaml_parser.js -i yaml-input-file.yml > mongoose-output-file.js
+
+```
