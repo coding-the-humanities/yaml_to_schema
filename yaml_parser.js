@@ -24,7 +24,7 @@ if(!input_data) {
 	return;
 }
 
-var output_data = fs.existsSync("template/mongoose_schema_template.js.js") ? fs.readFileSync("template/mongoose_schema_template.js.js", 'utf8') : "";
+var output_data = fs.existsSync("template/mongoose_schema_template.js") ? fs.readFileSync("template/mongoose_schema_template.js", 'utf8') : "";
 
 if(!input_data) {
 	console.log("missing template/schema_template.js! aborting...");
@@ -33,8 +33,12 @@ if(!input_data) {
 
 var yml_data = yml.safeLoad(input_data);
 
-var content = [];
+if(!yml_data.hasOwnProperty('type')) {
+	console.log("missing 'name' for the schema. aborting...");
+	return;
+}
 
+var content = [];
 var required_fields = [];
 var all_fields = [];
 
@@ -73,7 +77,6 @@ for(k in yml_data) {
 			}
 	}
 }
-
 
 var content_str = content.toString().replace(/,/g, ',\n').replace(/±/g, ',');
 
