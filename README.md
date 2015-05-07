@@ -7,4 +7,4 @@ Install
 
 Usage 
 
-> node yaml_parser.js -i <yaml-input-file.yml> > <mongoose-output-file>.js
+> node yaml_parser.js -i __yaml-input-file.yml__ > __mongoose-output-file.js__
