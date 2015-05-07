@@ -1,0 +1,14 @@
+{
+  "name": "yaml_to_schema",
+  "version": "0.0.0",
+  "description": "transforms yaml to mongoose db shema",
+  "main": "yaml_parser.js",
+  "scripts": {
+    "test": "echo \"Hahaha!\" && exit 1"
+  },
+  "author": "gauthiier",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.3.0"
+  }
+}
